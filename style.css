@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    overflow: hidden;
+}
+/* Main Container */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 21em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 12px 12px hsl(212, 23%, 69%);
+    overflow: hidden;
+}
+
+/* Image Hero */
+.card-head, .hero {
+    display: block;
+    width: 100%;
+    height: 14em;
+}
+
+/* Header Container */
+h1, h2, span {
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-size: 1em;
+    margin: 20px 30px 8px;
+    color: hsl(217, 19%, 35%);
+}
+
+h2 {
+    font-size: .8em;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 13px 30px;
+    color: hsl(214, 17%, 51%);
+}
+/* Profile Container */
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3px;
+}
+
+.p-pic {
+    margin-top: 6px;
+}
+
+.pfp {
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 100%;
+}
+
+.p-name {
+    margin-top: 6px;
+    margin-right: 70px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: .9em;
+    color: hsl(217, 19%, 35%);
+}
+
+.date {
+    font-weight: 500;
+    font-size: .8em;
+    color: hsl(214, 17%, 51%);
+}
+#btn-inactive {
+    padding-right: 4px;
+}
+
+.share-btn {
+    margin: 17px 0px;
+}
+
+.share-btn:hover {
+    cursor: pointer;
+}
+/* Social Media Container */
+.share-box {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 0px 0px 10px 10px;
+    transition: opacity .2s ease-in-out, visibility .3s ease-in-out;
+}
+
+.sm-icons {
+    padding: 0px 50px 0px 0px;
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin-right: 12px;
+}
+
+.s-title {
+    margin: 15px 0px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: hsl(212, 23%, 69%);
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+@media all and (min-width: 400px) {
+
+    main {
+        flex-direction: row;
+        width: 40em;
+    }
+
+    .hero, .card-head {
+        height: 16em;
+    }
+
+    h1 {
+        margin: 20px 30px;
+    }
+
+    h2 {
+        margin: 15px 30px;
+        line-height: 23px;
+    }
+
+    .profile {
+        margin: 20px 0px 5px;
+    }
+
+    .p-name {
+        margin-right: 107px;
+    }
+
+    .share-box {
+        position: fixed;
+        width: 13em;
+        height: 3em;
+        border-radius: 10px;
+        left: 62%;
+        bottom: 36%;
+    }
+
+    .share-box::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: hsl(217, 19%, 35%);
+        position: fixed;
+        top: 64%;
+    }
+
+    #btn-active {
+        display: none;
+    }
+
+    .s-title {
+        margin: 15px 0px 15px 15px;
+
+    }
+
+    .sm-icons {
+        padding: 0;
+        margin: 15px 0px 0px 15px;
+    }
+}
